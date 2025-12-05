@@ -27,7 +27,7 @@ export default function NotificationList() {
                 {/* notifications list */}
                 {notificationsList?.map((n) => (
                     <div key={n.id} className="border-b border-gray-200 py-2 flex justify-between">
-                        <div onClick={() => markAsRead(n.id)}>
+                        <div onClick={() => markAsRead(n.id)} className="cursor-pointer">
                             <p className={n.read ? "text-gray-500" : "font-semibold"}>
                                 {n.message}
                             </p>

@@ -6,7 +6,7 @@ import useNotification from "@/hooks/useNotification";
 export default function NotificationStream() {
     const { addNotification } = useNotification();
 
-    // new notification will be created for every 5 minutes
+    // new notification will be created for every 1 minute
     useEffect(() => {
         function start() {
             const messages = [
@@ -21,7 +21,7 @@ export default function NotificationStream() {
             setInterval(() => {
                 const msg = messages[Math.floor(Math.random() * messages.length)];
                 addNotification(msg);
-            }, 5 * 60 * 1000);
+            }, 60000);
         }
 
         start();
